@@ -14,7 +14,7 @@ The initial idea of this script is to automate the deploy of android aar librari
 Modify (or create) the file  `USER_HOME/.gradle/gradle.properties` to include the path to your local repository.
 
 ```properties
-REPOSITORY_PATH = file://path/to/your/repo
+REPOSITORY_PATH = file:///path/to/your/repo
 ```
 Be sure you don't include the / at the end of the path
 
@@ -40,7 +40,7 @@ POM_LICENCE_NAME=The Apache Software License, Version 2.0
 POM_LICENCE_URL=http://www.apache.org/licenses/LICENSE-2.0.txt
 POM_LICENCE_DIST=repo
 POM_DEVELOPER_ID=BlindBugs
-POM_DEVELOPER_NAME=Sergi Martínez
+POM_DEVELOPER_NAME=Sergi MartÃ­nez
 
 POM_NAME=My Lib
 POM_ARTIFACT_ID=mylib
@@ -68,7 +68,7 @@ Note for Windows users: remember that if you are using the graddle wrapper, you 
 
 ## License
 
-    Copyright 2014 Sergi Martínez
+    Copyright 2014 Sergi MartÃ­nez
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
