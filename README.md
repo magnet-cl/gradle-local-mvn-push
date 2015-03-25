@@ -1,7 +1,7 @@
 gradle-local-mvn-push
 ===============
 
-This work is forked from Chris Bane's [gradle-mvn-push](https://github.com/chrisbanes/gradle-mvn-push). Thank's to Crhis for his work, as it really saved me a lot of hours. You're my hero :)
+This work is forked from Sergi Martínez [gradle-local-mvn-push](https://github.com/sergiandreplace/gradle-local-mvn-push). Thank's to Sergi for his work, as it really saved me a lot of hours.
 
 The initial idea of this script is to automate the deploy of android aar libraries into a local maven repository. The whole picture is to use github as a maven repository by just comitting the changes generated in the local one after executing the script.
 
@@ -59,12 +59,11 @@ apply from: 'https://raw.github.com/sergiandreplace/gradle-local-mvn-push/master
 
 ### 4. Build and Push
 
-You can now build and push:
+You can now build and push from the library folder:
 
 ```bash
-$ gradle clean build uploadArchives
+$ ./gradlew clean build uploadArchives
 ```
-Note for Windows users: remember that if you are using the graddle wrapper, you must execute gradlew instead gradle
 
 ## License
 
