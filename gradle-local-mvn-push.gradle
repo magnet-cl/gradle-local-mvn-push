@@ -32,8 +32,8 @@ afterEvaluate { project ->
                 pom.artifactId = POM_ARTIFACT_ID
                 pom.version = VERSION_NAME
 
-                repository(url: PRIVATE_REPOSITORY_PATH + "/release")
-                snapshotRepository(url: PRIVATE_REPOSITORY_PATH + "/snapshot")
+                repository(url: MAGNET_REPOSITORY_PATH + "/release")
+                snapshotRepository(url: MAGNET_REPOSITORY_PATH + "/snapshot")
 
                 pom.project {
                     name POM_NAME

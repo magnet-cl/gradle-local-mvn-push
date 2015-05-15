@@ -11,10 +11,10 @@ The initial idea of this script is to automate the deploy of android aar librari
 
 ### 1. Setup your local repository path
 
-Modify (or create) the file  `USER_HOME/.gradle/gradle.properties` to include the path to your local repository.
+Modify (or create) the file  `USER_HOME/.gradle/gradle.properties` to include the path to your local magnet repository.
 
 ```properties
-REPOSITORY_PATH = file:///path/to/your/repo
+MAGNET_REPOSITORY_PATH = file:///path/to/your/repo
 ```
 Be sure you don't include the / at the end of the path
 
@@ -29,7 +29,7 @@ This is an example of the supported properties:
 ```properties
 VERSION_NAME=1.0.0
 VERSION_CODE=1
-GROUP=com.blindbugs.android
+GROUP=cl.magnet.mylib
 
 POM_DESCRIPTION=My fancy library uploaded to a maven repo
 POM_URL=https://github.com/sergiandreplace/mylib
@@ -39,8 +39,8 @@ POM_SCM_DEV_CONNECTION=scm:git@github.com:sergiandreplace/mylib.git
 POM_LICENCE_NAME=The Apache Software License, Version 2.0
 POM_LICENCE_URL=http://www.apache.org/licenses/LICENSE-2.0.txt
 POM_LICENCE_DIST=repo
-POM_DEVELOPER_ID=BlindBugs
-POM_DEVELOPER_NAME=Sergi Martínez
+POM_ORGANIZATION_NAME=Magnet
+POM_ORGANIZATION_URL=http://magnet.cl
 
 POM_NAME=My Lib
 POM_ARTIFACT_ID=mylib
@@ -54,7 +54,7 @@ POM_PACKAGING=aar
 Add the following at the end of the `build.gradle` for each module you wish to upload:
 
 ```groovy
-apply from: 'https://raw.github.com/sergiandreplace/gradle-local-mvn-push/master/gradle-local-mvn-push.gradle'
+apply from: 'https://raw.githubusercontent.com/magnet-cl/gradle-local-mvn-push/other/gradle-local-mvn-push.gradle'
 ```
 
 ### 4. Build and Push
