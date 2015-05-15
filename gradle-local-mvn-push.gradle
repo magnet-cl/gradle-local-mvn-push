@@ -32,8 +32,8 @@ afterEvaluate { project ->
                 pom.artifactId = POM_ARTIFACT_ID
                 pom.version = VERSION_NAME
 
-                repository(url: REPOSITORY_PATH + "/release")
-                snapshotRepository(url: REPOSITORY_PATH + "/snapshot")
+                repository(url: PRIVATE_REPOSITORY_PATH + "/release")
+                snapshotRepository(url: PRIVATE_REPOSITORY_PATH + "/snapshot")
 
                 pom.project {
                     name POM_NAME
@@ -55,11 +55,9 @@ afterEvaluate { project ->
                         }
                     }
 
-                    developers {
-                        developer {
-                            id POM_DEVELOPER_ID
-                            name POM_DEVELOPER_NAME
-                        }
+                    organization {
+                        name POM_ORGANIZATION_NAME
+                        url POM_ORGANIZATION_URL
                     }
                 }
             }
@@ -74,6 +72,7 @@ afterEvaluate { project ->
     task androidJavadocs(type: Javadoc) {
         source = android.sourceSets.main.java.srcDirs
         classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+        failOnError false
     }
 
     task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
